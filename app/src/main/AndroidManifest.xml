@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".base.test.TestActivity"/>
+        <activity android:name=".module.login.LoginActivity"/>
+
+
     </application>
 
 </manifest>
