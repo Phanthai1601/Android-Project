@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Movie</string>
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="sign_in_with_login_code">Dùng mã đăng nhập</string>
+
+    <string name="email_or_phone_number">Email or Phone number</string>
+    <string name="password">Password</string>
+    <string name="sigin_in">Đăng nhập</string>
+    <string name="todo">TODO</string>
+    <string name="or">Hoặc</string>
+    <string name="forgot_password">Bạn quên mật khẩu?</string>
+    <string name="sign_in_text">Bạn mới sử dụng Netflix? Đăng ký ngay</string>
 </resources>

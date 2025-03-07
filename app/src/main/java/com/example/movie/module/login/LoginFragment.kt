@@ -1,11 +1,14 @@
 package com.example.movie.module.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.movie.R
 import com.example.movie.base.fragment.BaseBindingFragment
 import com.example.movie.databinding.FragmentLoginBinding
+import com.example.movie.module.home.HomeActivity
+import com.example.movie.module.home.HomeFragment
 
 class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
     private lateinit var loginViewModel : LoginViewModel
@@ -31,7 +34,8 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
 
         loginViewModel.loginResult.observe(viewLifecycleOwner) { success ->
             if (success) {
-                showToast("Đăng nhập thành công!")
+                val intent  = Intent(requireContext(), HomeActivity::class.java)
+                startActivity(intent)
             } else {
                 showToast("Đăng nhập thất bại!")
             }

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Movie"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".module.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".base.test.TestActivity"/>
         <activity android:name=".module.login.LoginActivity"/>
+        <activity android:name=".module.home.HomeActivity"/>
+        <activity android:name=".MainActivity"/>
+
 
 
     </application>

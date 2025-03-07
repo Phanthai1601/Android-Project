@@ -9,7 +9,6 @@ class LoginViewModel : BaseViewModel() {
     val loginResult: LiveData<Boolean> get() = _loginResult
 
     fun login(username: String, password: String) {
-        // Giả lập kiểm tra đăng nhập
         _loginResult.value = username == "admin" && password == "1234"
     }
 }

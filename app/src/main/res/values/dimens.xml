@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_large">18dp</dimen>
+
+    <dimen name="width_button">317dp</dimen>
+    <dimen name="height_button">46dp</dimen>
+    <dimen name="height_text_view">70dp</dimen>
+
+</resources>
