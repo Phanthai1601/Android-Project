@@ -2,6 +2,7 @@
 <resources>
     <dimen name="margin_normal">16dp</dimen>
     <dimen name="margin_large">18dp</dimen>
+    <dimen name="icon_size_normal">@dimen/_18sdp</dimen>
 
     <dimen name="width_button">317dp</dimen>
     <dimen name="height_button">46dp</dimen>

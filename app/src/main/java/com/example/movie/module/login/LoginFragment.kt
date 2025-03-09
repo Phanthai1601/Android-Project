@@ -26,12 +26,12 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
     override fun getLayoutResId(): Int  = R.layout.fragment_login
     override fun init() {
         loginViewModel =LoginViewModel()
-        binding.btnLogin.setOnClickListener{
+        /*binding.btnLogin.setOnClickListener{
             val userName = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
             loginViewModel.login(userName, password)
         }
-
+*/
         loginViewModel.loginResult.observe(viewLifecycleOwner) { success ->
             if (success) {
                 val intent  = Intent(requireContext(), HomeActivity::class.java)
