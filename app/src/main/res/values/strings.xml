@@ -3,11 +3,19 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="sign_in">Đăng nhập</string>
     <string name="sign_in_with_login_code">Dùng mã đăng nhập</string>
-
+    <string name="todo">TODO</string>
     <string name="email_or_phone_number">Email hoặc số điện thoại</string>
     <string name="password">Mật khẩu</string>
     <string name="sigin_in">Đăng nhập</string>
     <string name="or">Hoặc</string>
     <string name="forgot_password">Bạn quên mật khẩu?</string>
     <string name="sign_in_text">Bạn mới sử dụng Netflix? Đăng ký ngay</string>
+    <string name="privacy">Privacy</string>
+    <string name="unlimited_movies_tv_shows_and_more">Unlimited movies, TV shows, and more.</string>
+    <string name="sign_in_primary">Sign In</string>
+    <string name="get_started">Get Started</string>
+    <string name="ready_to_watch">Ready to watch</string>
+    <string name="enter_your_email_to_create_or_sign_in_to_your_account">Enter your email to create or sign in to your account.</string>
+    <string name="email">Email</string>
+    <string name="watch_anywhere_cancel_anytime_tap_the_link_below_to_sign_up">Watch anywhere. Cancel anytime, Tap the link below to sign up</string>
 </resources>

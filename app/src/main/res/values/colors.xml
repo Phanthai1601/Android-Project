@@ -4,4 +4,25 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="primaryColor">#3675FF</color>
+
+    <!-- Primary Color -->
+    <color name="primaryColor_red_light_1">#D22F26</color>
+    <color name="primaryColor_red">#CF5952</color>
+    <color name="primaryColor_red_dark_1">#B1060F</color>
+
+    <!-- Neutral Color -->
+    <color name="NeutralGrey">#737373</color>
+    <color name="NeutralGreyDark">#323232</color>
+    <color name="NeutralGreyDark2">#191919</color>
+    <color name="NeutralGreyDark3">#010101</color>
+    <color name="GrayLight3">#E6E6E6</color>
+    <color name="GrayLight2">#CBCBCB</color>
+    <color name="GrayLight1">#B2B2B2</color>
+
+    <!-- System Color -->
+
+
+
+
+
 </resources>

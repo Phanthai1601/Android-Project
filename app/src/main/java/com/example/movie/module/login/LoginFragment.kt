@@ -11,21 +11,23 @@ import com.example.movie.module.home.HomeActivity
 import com.example.movie.module.home.HomeFragment
 
 class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
-    private lateinit var loginViewModel : LoginViewModel
-    companion object{
-            fun newInstance(): LoginFragment {
-                val fragment = LoginFragment()
-                val args = Bundle()
-                fragment.arguments = args
-                return fragment
-            }
+    private lateinit var loginViewModel: LoginViewModel
+
+    companion object {
+        fun newInstance(): LoginFragment {
+            val fragment = LoginFragment()
+            val args = Bundle()
+            fragment.arguments = args
+            return fragment
+        }
     }
+
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentLoginBinding
         get() = FragmentLoginBinding::inflate
 
-    override fun getLayoutResId(): Int  = R.layout.fragment_login
+    override fun getLayoutResId(): Int = R.layout.fragment_login
     override fun init() {
-        loginViewModel =LoginViewModel()
+        loginViewModel = LoginViewModel()
         /*binding.btnLogin.setOnClickListener{
             val userName = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
@@ -34,16 +36,21 @@ class LoginFragment : BaseBindingFragment<FragmentLoginBinding>() {
 */
         loginViewModel.loginResult.observe(viewLifecycleOwner) { success ->
             if (success) {
-                val intent  = Intent(requireContext(), HomeActivity::class.java)
+                val intent = Intent(requireContext(), HomeActivity::class.java)
                 startActivity(intent)
             } else {
                 showToast("Đăng nhập thất bại!")
             }
         }
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
+
     private fun showToast(message: String) {
         requireContext().let {
             android.widget.Toast.makeText(it, message, android.widget.Toast.LENGTH_SHORT).show()
         }
     }
+
 }

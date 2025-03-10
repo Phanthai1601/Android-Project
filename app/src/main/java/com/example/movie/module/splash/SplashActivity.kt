@@ -7,6 +7,7 @@ import com.example.movie.MainActivity
 import com.example.movie.R
 import com.example.movie.base.activity.BaseActivity
 import com.example.movie.databinding.SplashActivityBinding
+import com.example.movie.module.login.LoginActivity
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -21,7 +22,7 @@ class SplashActivity : BaseActivity() {
 
         lifecycleScope.launch {
             delay(2000)
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
             finish()
         }
     }

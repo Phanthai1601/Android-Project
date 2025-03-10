@@ -28,7 +28,7 @@ class LoginActivity : BaseFragmentActivity() {
 
     override fun getFragmentContainerId(): Int = R.id.container
 
-    override fun initFragment(): BaseFragment = LoginFragment.newInstance()
+    override fun initFragment(): BaseFragment = LoginFragmentGetStarted.newInstance()
 
     override fun changeStatusBarTextColor(): Boolean {
         TODO("Not yet implemented")
