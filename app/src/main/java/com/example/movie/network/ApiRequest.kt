@@ -40,7 +40,5 @@ open class ApiRequest {
     fun getListMovie(page : Int, callback: Callback<ListMovieResponse>) {
         mApiPoint.getListNewLyUpdatedMovie(page).enqueue(callback)
     }
-    fun getDetailMovie(slug: String, callback: Callback<ListMovieDetailResponse>){
-        mApiPoint.getDetailMovie(slug).enqueue(callback)
-    }
+
 }

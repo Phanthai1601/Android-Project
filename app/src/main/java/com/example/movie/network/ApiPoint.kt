@@ -10,6 +10,4 @@ import retrofit2.http.Query
 interface ApiPoint {
     @GET("danh-sach/phim-moi-cap-nhat")
     fun getListNewLyUpdatedMovie(@Query("page") page: Int): Call<ListMovieResponse>
-    @GET("phim")
-    fun getDetailMovie(@Query("slug") slug: String): Call<ListMovieDetailResponse>
 }
