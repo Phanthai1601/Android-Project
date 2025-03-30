@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MenuTitle">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search" />
+    <item
+        android:id="@+id/action_video"
+        android:icon="@drawable/ic_play_now" />
+    <item
+        android:id="@+id/action_download"
+        android:icon="@drawable/ic_download" />
+    <item
+        android:id="@+id/action_user"
+        android:icon="@drawable/ic_user" />
+
+
+</menu>

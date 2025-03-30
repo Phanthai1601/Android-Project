@@ -1,7 +1,6 @@
 package com.example.movie.network
 
 import android.content.Context
-import com.example.movie.model.response.ListMovieDetailResponse
 import com.example.movie.model.response.ListMovieResponse
 import com.example.movie.utils.ApiUtils
 import com.google.gson.GsonBuilder
