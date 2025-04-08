@@ -48,6 +48,19 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     implementation("com.intuit.sdp:sdp-android:1.1.0")
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    // https://mvnrepository.com/artifact/androidx.fragment/fragment-ktx
+    implementation("androidx.fragment:fragment-ktx:1.8.5")
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+    // https://mvnrepository.com/artifact/com.google.android.exoplayer/exoplayer
+    implementation("com.google.android.exoplayer:exoplayer:2.18.0")
+
+
+
 
 
 }

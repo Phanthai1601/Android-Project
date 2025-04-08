@@ -18,4 +18,5 @@
     <string name="enter_your_email_to_create_or_sign_in_to_your_account">Enter your email to create or sign in to your account.</string>
     <string name="email">Email</string>
     <string name="watch_anywhere_cancel_anytime_tap_the_link_below_to_sign_up">Watch anywhere. Cancel anytime, Tap the link below to sign up</string>
+    <string name="error">Lỗi</string>
 </resources>
