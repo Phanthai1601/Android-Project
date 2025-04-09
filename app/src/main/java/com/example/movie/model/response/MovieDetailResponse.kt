@@ -1,5 +1,7 @@
 package com.example.movie.model.response
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.example.movie.model.Episodes
 import com.example.movie.model.Movie
 import com.google.gson.annotations.SerializedName

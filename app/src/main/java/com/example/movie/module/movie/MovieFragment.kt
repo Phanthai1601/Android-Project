@@ -23,6 +23,8 @@ class MovieFragment : BaseBindingFragment<MovieFragmentBinding>() {
     private val viewModel: MovieViewModel by viewModels()
     private lateinit var adapter: MovieAdapter
 
+
+
     override fun getLayoutResId(): Int = R.layout.movie_fragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,25 +43,28 @@ class MovieFragment : BaseBindingFragment<MovieFragmentBinding>() {
 
     private fun initViews() {
         adapter = MovieAdapter(requireContext())  // Khởi tạo adapter
-        binding.rcvListMovie.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerPopular.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+            adapter = this@MovieFragment.adapter
+        }
+        binding.recyclerDemo.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+            adapter = this@MovieFragment.adapter
+        }
+        binding.recyclerTest.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
             adapter = this@MovieFragment.adapter
         }
     }
 
     private fun initObservers() {
-       /* viewModel.movies.observe(viewLifecycleOwner) { movies ->
-            adapter.updateMovies(movies)  // Cập nhật dữ liệu vào adapter
-        }*/
-        viewModel.movieDetail.observe(viewLifecycleOwner){
+        viewModel.movies.observe(viewLifecycleOwner){
             movie->adapter.updateMovies(movie)
-        }
-        viewModel.error.observe(viewLifecycleOwner) { errorMessage ->
-            Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT).show()
         }
     }
 
+
     private fun initData() {
-        viewModel.getMovieDetail()  // Gọi API lấy danh sách phim
+        viewModel.fetchMovies(requireContext())
     }
 }

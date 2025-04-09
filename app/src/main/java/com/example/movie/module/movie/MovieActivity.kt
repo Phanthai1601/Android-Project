@@ -23,7 +23,12 @@ class MovieActivity : BaseFragmentActivity() {
 
     override fun getFragmentContainerId(): Int = R.id.container
 
-    override fun initFragment(): BaseFragment  = MovieFragment.newInstance()
+    override fun initFragment(): BaseFragment{
+        val slug = intent.getStringExtra("Slug")?:""
+        val nameMovie = intent.getStringExtra("nameMovie")?:""
+        val year= intent.getIntExtra("year",2025)
+        return MovieDetailFragment.newInstance(slug, nameMovie, year)
+    }
 
     override fun changeStatusBarTextColor(): Boolean {
         TODO("Not yet implemented")
