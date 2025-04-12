@@ -2,6 +2,7 @@ package com.example.movie.network
 
 import android.content.Context
 import com.example.movie.model.response.ListMovieResponse
+import com.example.movie.model.response.MovieDetailResponse
 import com.example.movie.utils.ApiUtils
 import com.google.gson.GsonBuilder
 import retrofit2.Callback
@@ -38,6 +39,9 @@ open class ApiRequest {
 
     fun getListMovie(page : Int, callback: Callback<ListMovieResponse>) {
         mApiPoint.getListNewLyUpdatedMovie(page).enqueue(callback)
+    }
+    fun getMovieDetail(slug: String, callback: Callback<MovieDetailResponse>){
+        mApiPoint.getMovieDetail(slug).enqueue(callback)
     }
 
 }

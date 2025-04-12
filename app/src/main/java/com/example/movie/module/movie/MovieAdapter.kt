@@ -46,7 +46,6 @@ class MovieAdapter(context: Context) :
             Glide.with(itemView.context)
                 .load(item.posterUrl)
                 .placeholder(R.drawable.loading_image)
-
                 .error(R.drawable.img)
                 .into(imageView)  // Load vào ImageView
         }
