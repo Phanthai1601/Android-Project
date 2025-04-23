@@ -3,11 +3,11 @@ package com.example.movie.module.splash
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
-import com.example.movie.MainActivity
 import com.example.movie.R
 import com.example.movie.base.activity.BaseActivity
 import com.example.movie.databinding.SplashActivityBinding
 import com.example.movie.module.login.LoginActivity
+import com.example.movie.module.movie.MovieActivity
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

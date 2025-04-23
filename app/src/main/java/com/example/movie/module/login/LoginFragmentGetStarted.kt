@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import com.example.movie.base.fragment.BaseBindingFragment
 import com.example.movie.databinding.FragmentGetStartedBinding
 import com.example.movie.databinding.FragmentLoginBinding
+import com.example.movie.module.home.HomeActivity
+import com.example.movie.module.movie.MovieActivity
 
 class LoginFragmentGetStarted : BaseBindingFragment<FragmentGetStartedBinding>() {
     companion object{
@@ -23,8 +25,9 @@ class LoginFragmentGetStarted : BaseBindingFragment<FragmentGetStartedBinding>()
         binding.tvSignIn.setOnClickListener{
             pushFragment(LoginFragment.newInstance(),"Test")
         }
+        val homeActivity = HomeActivity.makeIntent(requireContext())
         binding.btnGetStart.setOnClickListener{
-            pushFragment(LoginFragmentEmail.newInstance(), "Demo")
+            startActivity(homeActivity)
         }
     }
 }

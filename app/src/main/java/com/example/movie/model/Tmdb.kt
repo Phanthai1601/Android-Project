@@ -6,6 +6,6 @@ data class Tmdb(
     @SerializedName("type") var type: String? = null,
     @SerializedName("id") var id: String? = null,
     @SerializedName("season") var season: String? = null,
-    @SerializedName("vote_average") var voteAverage: Int? = null,
+    @SerializedName("vote_average") var voteAverage: Double? = null,
     @SerializedName("vote_count") var voteCount: Int? = null
 )

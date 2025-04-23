@@ -1,5 +1,6 @@
 package com.example.movie.module.home
 
+import MovieFragment
 import android.content.Context
 import android.content.Intent
 import com.example.movie.R
@@ -21,7 +22,7 @@ class HomeActivity : BaseFragmentActivity() {
 
     override fun getFragmentContainerId(): Int = R.id.container
 
-    override fun initFragment(): BaseFragment = HomeFragment.newInstance()
+    override fun initFragment(): BaseFragment = MovieFragment.newInstance()
 
     override fun changeStatusBarTextColor(): Boolean {
         TODO("Not yet implemented")

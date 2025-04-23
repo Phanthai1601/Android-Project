@@ -1,5 +1,6 @@
 package com.example.movie.module.movie
 
+import MovieFragment
 import android.content.Context
 import android.content.Intent
 import com.example.movie.R
