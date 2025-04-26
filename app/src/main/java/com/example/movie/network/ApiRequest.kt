@@ -3,6 +3,7 @@ package com.example.movie.network
 import android.content.Context
 import com.example.movie.model.response.ListMovieResponse
 import com.example.movie.model.response.MovieDetailResponse
+import com.example.movie.model.response.SearchMovieResponse
 import com.example.movie.utils.ApiUtils
 import com.google.gson.GsonBuilder
 import retrofit2.Callback
@@ -42,6 +43,9 @@ open class ApiRequest {
     }
     fun getMovieDetail(slug: String, callback: Callback<MovieDetailResponse>){
         mApiPoint.getMovieDetail(slug).enqueue(callback)
+    }
+    fun searchMovie(keyword: String, page: Int,limit: Int, callback: Callback<SearchMovieResponse>) {
+        mApiPoint.searchMovie(keyword, page, "_id","asc", limit).enqueue(callback)
     }
 
 }
