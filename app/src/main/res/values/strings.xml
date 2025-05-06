@@ -19,4 +19,6 @@
     <string name="email">Email</string>
     <string name="watch_anywhere_cancel_anytime_tap_the_link_below_to_sign_up">Watch anywhere. Cancel anytime, Tap the link below to sign up</string>
     <string name="error">Lỗi</string>
+    <string name="search">Search</string>
+    <string name="movies_tv">Movies &amp; TV</string>
 </resources>
