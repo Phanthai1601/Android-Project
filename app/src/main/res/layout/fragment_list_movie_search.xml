@@ -3,16 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/movies_tv"
-        android:id="@+id/tvMovie"
-        android:layout_marginLeft="@dimen/_15sdp"
-        android:fontFamily="@font/netflix_bold"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/tvInputSearch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/search_24"
+            android:hint="@string/search"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/netflix_bold"
+        android:text="@string/movies_tv"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputSearch" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvListMovieSearch"
@@ -20,7 +37,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMovie"
         app:layout_constraintStart_toStartOf="parent"
-/>
+        app:layout_constraintTop_toBottomOf="@+id/tvMovie" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import com.example.movie.model.Items
 import com.example.movie.model.Movie
 import com.example.movie.model.response.ListMovieResponse
 import com.example.movie.model.response.MovieDetailResponse
+import com.example.movie.model.response.SearchMovieResponse
 import com.example.movie.network.ApiRequest
 import retrofit2.Call
 import retrofit2.Callback
@@ -83,6 +84,18 @@ object MovieRepository {
 
             }
         )
+    }
+
+    fun getMovieSearch(
+        context: Context,
+        keyword: String,
+        page: Int,
+        limit: Int,
+        onSuccess: (ArrayList<Items>) -> Unit,
+        onError: (message: String) -> Unit
+
+    ){
+
     }
 
 

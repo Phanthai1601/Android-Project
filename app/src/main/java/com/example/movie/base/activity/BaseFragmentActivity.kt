@@ -40,7 +40,7 @@ abstract class BaseFragmentActivity : BaseActivity() {
         )
     }
 
-    private fun replaceFragment(
+    open fun replaceFragment(
         fragment: BaseFragment,
         tag: String,
         openEnter: Int,
