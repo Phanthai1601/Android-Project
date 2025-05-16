@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Movie" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primaryColor_red_dark_1</item>
-        <item name="color">@color/NeutralGreyDark2</item>
+        <item name="colorSecondary">@color/NeutralGreyDark2</item>
 
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
