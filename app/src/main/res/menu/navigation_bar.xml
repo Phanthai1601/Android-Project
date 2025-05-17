@@ -4,19 +4,19 @@
     tools:ignore="MenuTitle">
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/ic_home" />
+        android:icon="@drawable/global_icon" />
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/ic_search" />
+        android:icon="@drawable/search" />
     <item
         android:id="@+id/action_video"
-        android:icon="@drawable/ic_play_now" />
+        android:icon="@drawable/category" />
     <item
         android:id="@+id/action_download"
-        android:icon="@drawable/ic_download" />
+        android:icon="@drawable/download" />
     <item
         android:id="@+id/action_user"
-        android:icon="@drawable/ic_user" />
+        android:icon="@drawable/user" />
 
 
 </menu>

@@ -9,6 +9,7 @@
     <color name="primaryColor_red_light_1">#D22F26</color>
     <color name="primaryColor_red">#CF5952</color>
     <color name="primaryColor_red_dark_1">#B1060F</color>
+    <color name="gray">#D7BFBF</color>
 
     <!-- Neutral Color -->
     <color name="NeutralGrey">#737373</color>
@@ -20,6 +21,9 @@
     <color name="GrayLight1">#B2B2B2</color>
 
     <!-- System Color -->
+    <color name="blue_gray">#03A9F4</color>
+    <color name="system_red">#FE0202</color>
+    <color name="system_blue">#4B6AEA</color>
 
 
 
