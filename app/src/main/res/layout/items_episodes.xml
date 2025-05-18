@@ -1,16 +1,29 @@
 <!-- res/layout/item_episode.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_80sdp"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp">
-
-    <ImageView
-        android:id="@+id/imgThumbnail"
+    <FrameLayout
         android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_70sdp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerCrop" />
+        android:layout_height="@dimen/_70sdp">
+        <ImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:contentDescription="@string/app_name"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop" />
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+
 
     <LinearLayout
         android:layout_width="0dp"

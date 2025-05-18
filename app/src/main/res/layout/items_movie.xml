@@ -2,16 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/_5sdp"
     android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imvThumnail"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_marginRight="@dimen/_5sdp"
-        android:background="@drawable/bg_item_movie"
-        android:clipToOutline="true"
-        android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/imvThumnail"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/bg_item_movie"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:visibility="visible"/>
+    </FrameLayout>
+
 
 
 </LinearLayout>

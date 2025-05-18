@@ -1,17 +1,32 @@
 <!-- res/layout/item_episode.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_80sdp"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:layout_marginTop="@dimen/_5sdp"
+    >
 
-    <ImageView
-        android:id="@+id/imgThumbnail"
+    <FrameLayout
         android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_70sdp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/img"
-        android:scaleType="centerCrop" />
+        android:layout_height="@dimen/_70sdp">
+
+        <ImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_image_movie"
+            android:contentDescription="@string/app_name" />
+
+        <ProgressBar
+            android:id="@+id/progressLoading"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="visible"/>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -26,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tôi thấy hoa vàng trên cỏ xanh"
-            android:textColor="@color/GrayLight2"
+            android:textColor="@color/white"
             android:textSize="14dp"
             android:textStyle="bold" />
 
