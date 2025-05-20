@@ -27,7 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".module.login.LoginActivity" />
-        <activity android:name=".module.home.HomeActivity" />
+        <activity android:name=".module.home.HomeActivity"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity android:name=".module.movie.MovieActivity" />
         <activity android:name=".MainActivity" />
 

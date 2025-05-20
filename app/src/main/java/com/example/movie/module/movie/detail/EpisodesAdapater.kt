@@ -2,13 +2,19 @@ package com.example.movie.module.movie.detail
 
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 
 import com.example.movie.R
 import com.example.movie.base.list.BaseAdapter
@@ -16,9 +22,11 @@ import com.example.movie.base.list.BaseViewHolder
 import com.example.movie.model.ServerData
 
 import com.example.movie.model.response.MovieDetailResponse
+import com.example.movie.module.movie.MovieViewModel
 
 class EpisodesAdapater(
     context: Context,
+    private val viewModel: MovieViewModel
 ) :
     BaseAdapter<ServerData, EpisodesAdapater.ItemsViewHolder>(context) {
     private var movieName: String = ""
@@ -45,6 +53,7 @@ class EpisodesAdapater(
         var episode: TextView
         var nameMovie: TextView
         var imgThumbnail: ImageView
+        private val progressLoading = itemView.findViewById<ProgressBar>(R.id.progressLoading)
 
         init {
             episode = itemView.findViewById(R.id.tvEpisodeName)
@@ -57,7 +66,28 @@ class EpisodesAdapater(
             nameMovie.text = movieName
             Glide.with(itemView.context)
                 .load(imageUrl)
-                .placeholder(R.drawable.loading_image)
+                .listener(object : RequestListener<Drawable> {
+                    override fun onResourceReady(
+                        resource: Drawable?,
+                        model: Any?,
+                        target: Target<Drawable>?,
+                        dataSource: DataSource?,
+                        isFirstResource: Boolean
+                    ): Boolean {
+                        progressLoading.visibility= View.GONE
+                        return false
+                    }
+
+                    override fun onLoadFailed(
+                        e: GlideException?,
+                        model: Any?,
+                        target: Target<Drawable>?,
+                        isFirstResource: Boolean
+                    ): Boolean {
+                        progressLoading.visibility = View.GONE
+                        return false
+                    }
+                })
                 .error(R.drawable.img)
                 .into(imgThumbnail)
             if (position == selectedPosition) {
@@ -70,6 +100,8 @@ class EpisodesAdapater(
                 selectedPosition = position
                 notifyItemChanged(previousPosition)
                 notifyItemChanged(selectedPosition)
+                viewModel.selectEpisode(item.linkM3u8.toString())
+
             }
 
         }

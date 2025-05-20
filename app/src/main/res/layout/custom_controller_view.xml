@@ -1,49 +1,69 @@
-<!-- res/layout/custom_controller_view.xml -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:padding="8dp">
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#80000000">
 
+    <!-- Seekbar và thời gian -->
     <LinearLayout
-        android:id="@+id/control_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/_35sdp"
-        android:layout_gravity="center">
+        android:gravity="center_vertical">
 
-        <!-- Rewind 10s -->
-        <ImageButton
-            android:id="@+id/exo_rew_10"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@null"
-            app:tint="@color/white"
-            android:src="@drawable/name_skip_backward"
-            android:contentDescription="Rewind 10 seconds"
-             />
-        <ImageButton
-            android:id="@+id/btnPause"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@null"
-            android:src="@drawable/ic_pause"
-            android:contentDescription="Rewind 10 seconds"
-            app:tint="@color/white" />
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:paddingEnd="6dp" />
 
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/exo_ff_10"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@null"
-            app:tint="@color/white"
-            android:contentDescription="Forward 10 seconds"
-            android:src="@drawable/name_skip_forward" />
-
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:paddingStart="6dp" />
     </LinearLayout>
 
-</FrameLayout>
+    <!-- Các nút điều khiển -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="12dp">
+
+        <!-- Nút play/pause -->
+        <ImageButton
+            android:id="@id/exo_play_pause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:contentDescription="Play/Pause"
+            android:scaleType="centerInside"
+            app:tint="@android:color/white" />
+
+        <!-- Nút xoay màn hình -->
+        <ImageButton
+            android:id="@+id/btn_fullscreen"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:contentDescription="Fullscreen"
+            android:src="@drawable/fullscreen"
+
+        android:layout_marginStart="12dp"/>
+    </LinearLayout>
+</LinearLayout>

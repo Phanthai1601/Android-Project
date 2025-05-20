@@ -30,7 +30,7 @@ class EpisodesFragment : BaseBindingFragment<FragmentListEpisodesBinding>() {
     }
 
     private fun initViews() {
-        adapater = EpisodesAdapater(requireContext())
+        adapater = EpisodesAdapater(requireContext(), viewModel)
         binding.rcvListEpisodes.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
