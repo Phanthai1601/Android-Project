@@ -78,7 +78,7 @@
         android:fontFamily="@font/netflix_regular"
         android:backgroundTint="@null"
         android:textColor="@color/white"
-        android:background="@drawable/bg_button_get_started"
+        style="@style/MyCustomButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
